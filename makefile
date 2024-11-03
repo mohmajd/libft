@@ -12,7 +12,7 @@ CFLAGS = -Werror -Wextra -Wall
 ARFLAGS = -rcs
 all : $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS) libft.h
 	ar ARFLAGS $(NAME).a $(OBJS)
 
 %.o: %.c

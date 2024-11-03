@@ -3,44 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohmajdo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 23:43:28 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/01 23:46:10 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/03 20:58:29 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	char	*p1;
-	char	*p2;
 	char	*to_find;
 	char	*find;
 	size_t	i;
 
+	if (!haystack || !needle)
+		return (NULL);
 	i = 0;
-	p1 = (char *) big;
-	p2 = (char *) little;
-	if (*p2 == '\0')
-		return (0);
-	else
+	if (*needle == '\0')
+		return (haystack);
+	while (i < ft_strlen(haystack))
 	{
-		while (i < len)
+		to_find = needle;
+		find = haystack;
+		while (*to_find == *find && (*to_find != '\0'))
 		{
-			to_find = p2;
-			find = p1;
-			while (*to_find == *find && (*to_find != '\0'))
-			{
-				to_find++;
-				find++;
-			}
-			if (*to_find == '\0')
-				return (p1);
-			p1++;
-			i++;
+			to_find++;
+			find++;
 		}
+		if (*to_find == '\0')
+			return (haystack);
+		haystack++;
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
