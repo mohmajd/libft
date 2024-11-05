@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoi.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohmajdo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:25:28 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/02 00:02:00 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 01:20:04 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count(int nb)
+static int	count(long nb)
 {
 	int	count;
 
 	count = 0;
-	if (nb == -2147483648)
-		return (11);
-	else if (nb < 0)
+	if (nb < 0)
 	{
 		count++;
 		nb = -nb;
@@ -38,37 +36,25 @@ char	*ft_itoa(int n)
 {
 	char	*result;
 	long	nb;
-	int		k;
 	int		j;
 
-	k = count(n);
-	j = k;
 	nb = n;
-	result = malloc(sizeof(char) * (k + 1));
+	j = count(nb);
+	result = malloc(sizeof(char) * (j + 1));
 	if (result == NULL)
 		return (NULL);
-	else if (nb < 0)
+	result[j] = '\0';
+	if (nb < 0)
 	{
-		nb = -nb;
-		while (k > 1)
-		{
-			result[k - 1] = (nb % 10) + 48;
-			nb = nb / 10;
-			k--;
-		}
 		result[0] = '-';
+		nb = -nb;
 	}
 	else if (nb == 0)
 		result[0] = '0';
-	else
+	while (j > 0)
 	{
-		while (k > 0)
-		{
-			result [k - 1] = (nb % 10) + 48;
-			nb = nb / 10;
-			k--;
-		}
+		result [j--] = (nb % 10) + 48;
+		nb = nb / 10;
 	}
-	result[j] = '\0';
 	return (result);
 }

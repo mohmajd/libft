@@ -7,16 +7,18 @@ SRCS = ft_substr.c ft_strjoin ft_strtrim.c ft_split.c ft_itoa ft_strmapi.c \
 	   ft_memcmp.c ft_strnstr.c ft_atoa.c ft_calloc.c ft_strdup.c
 OBJS = $(SRCS:.c = .o)
 
+AR = ar
 cc = cc
 CFLAGS = -Werror -Wextra -Wall
 ARFLAGS = -rcs
-all : $(NAME)
 
-$(NAME) : $(OBJS) libft.h
-	ar ARFLAGS $(NAME).a $(OBJS)
+all: $(NAME)
 
-%.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@
+$(NAME):$(OBGS) libft.h
+	$(AR) ARFLAGS $@ $^
+
+%.o:%.c
+	$(cc) -c $(CFLAGS) $< -o $@
 
 clean:
 	rm -f *.o
@@ -26,4 +28,4 @@ fclean: clean
 
 re: fclean all
 
-.phony: clean 
+.PHONY: clean

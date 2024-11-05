@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 23:29:34 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/03 21:05:30 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/04 23:21:25 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	char	*p;
 	size_t	i;
 
 	i = 0;
-	p = (char *) s;
-	while (p[i])
+	while (s[i])
 		i++;
 	return (i);
 }

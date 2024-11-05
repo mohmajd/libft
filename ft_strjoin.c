@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohmajdo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:06:22 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/01 23:25:25 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 00:24:11 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*static int ft_strlen(const char *s1)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i])
-		i++;
-	return (i);
-} */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -50,18 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	cnc[i] = '\0';
 	return (cnc);
 }
-/*int main() {
-    const char *s1 = "Hello, ";
-    const char *s2 = "World!";
-
-    char *p = ft_strjoin(s1, s2);
-
-    if (p != NULL) {
-        printf("Concatenated String: %s\n", p);
-        free(p); // Free the allocated memory
-    } else {
-        printf("Memory allocation failed.\n");
-    }
-
-    return 0;
-} */
