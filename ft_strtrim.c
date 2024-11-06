@@ -6,16 +6,16 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 19:30:31 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/05 01:05:26 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 15:47:31 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	result(const char *s1, size_t start, size_t len)
+static char	*result(const char *s1, size_t start, size_t len)
 {
 	char	*res;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	if (len < 0 || start >= ft_strlen(s1))

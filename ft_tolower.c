@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohmajdo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 23:56:04 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/01 23:57:26 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 19:16:17 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
-	if (c < 92 && c > 65)
+	if (c < 91 && c > 64)
 		c += 32;
 	return (c);
 }

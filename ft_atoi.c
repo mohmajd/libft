@@ -6,11 +6,11 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:15:48 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/04 20:45:08 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:36:19 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	atoi(const	char *str)
+int	ft_atoi(const	char *str)
 {
 	int	signe;
 	int	i;

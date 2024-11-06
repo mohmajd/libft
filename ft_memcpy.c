@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:22:55 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/04 22:13:02 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:17:02 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	p1 = (unsigned char *)dst;
 	p2 = (unsigned char *)src;
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{

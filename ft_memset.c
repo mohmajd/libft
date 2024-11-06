@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 00:04:18 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/05 00:18:56 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:07:21 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ void	*ft_memset(void *b, int c, size_t num)
 	p = (char *) b;
 	while (i < num)
 	{
-		p[i] = c;
+		p[i] = (char)c;
 		i++;
 	}
-	p[i] = '\0';
 	return (b);
 }

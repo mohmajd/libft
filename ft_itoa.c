@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 20:25:28 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/05 01:20:04 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:29:44 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ char	*ft_itoa(int n)
 	}
 	else if (nb == 0)
 		result[0] = '0';
-	while (j > 0)
+	while (nb > 0)
 	{
-		result [j--] = (nb % 10) + 48;
+		result [--j] = (nb % 10) + 48;
 		nb = nb / 10;
 	}
 	return (result);

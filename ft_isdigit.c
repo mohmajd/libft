@@ -6,13 +6,13 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:24:18 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/03 20:57:15 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:05:28 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c <= '9' && c >= '0')
 		return (1);
