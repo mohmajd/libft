@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:02:33 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/07 22:49:27 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/08 22:07:32 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dstsize == 0)
 		return (src_len);
-
 	if (dstsize <= dest_len)
 		return (dstsize + src_len);
 	while (src[i] && (dest_len + i < dstsize - 1))

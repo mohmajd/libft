@@ -6,11 +6,12 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 00:03:32 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/07 22:40:55 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/08 22:08:11 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static void	ft_fill(unsigned char *p1, const unsigned char *p2,size_t n)
 {
 	size_t	i;
@@ -38,7 +39,7 @@ static void	ft_fill(unsigned char *p1, const unsigned char *p2,size_t n)
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char	*p1;
+	unsigned char		*p1;
 	const unsigned char	*p2;
 
 	p1 = (unsigned char *)dst;
