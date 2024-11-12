@@ -27,10 +27,10 @@ ARFLAGS = -rcs
 
 all: $(NAME)
 
-$(NAME): $(OBJS) libft.h
+$(NAME): $(OBJS) 
 	$(AR) $(ARFLAGS) $@ $^
 
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
