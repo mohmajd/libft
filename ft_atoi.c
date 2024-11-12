@@ -6,32 +6,44 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:15:48 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/07 15:51:52 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:18:11 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const	char *str)
+#include "libft.h"
+
+static int	ft_sign(const char **str)
 {
 	int	signe;
-	int	i;
-	int	r;
 
 	signe = 1;
-	i = 0;
-	r = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (**str == ' ' || **str == '\n' || **str == '\t'
+		|| **str == '\v' || **str == '\f' || **str == '\r')
+		(*str)++;
+	if (**str == '-' || **str == '+')
 	{
-		if (str[i] == '-')
+		if (**str == '-')
 			signe *= (-1);
-		i++;
+		(*str)++;
 	}
-	while (str[i] <= '9' && str[i] >= '0')
+	return (signe);
+}
+
+int	ft_atoi(const	char *str)
+{
+	unsigned long	r;
+	int				signe;
+
+	r = 0;
+	signe = ft_sign(&str);
+	while (*str <= '9' && *str >= '0')
 	{
-		r = r * 10 + (str[i] - 48);
-		i++;
+		r = r * 10 + (*str - 48);
+		str++;
 	}
-	return (r * signe);
+	if (r > LONG_MAX && signe == 1)
+		return (-1);
+	if (r > (unsigned long)LONG_MAX + 1 && signe == -1)
+		return (0);
+	return ((int)r * signe);
 }

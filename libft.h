@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 20:56:23 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/05 19:13:14 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/12 20:26:13 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <limits.h>
 
 
 int		ft_isdigit(int c);
