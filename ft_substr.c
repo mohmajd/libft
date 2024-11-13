@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:17:38 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/05 00:02:30 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/13 23:26:37 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-/*int main() {
-    const char *original = "Hello, World!";
-    unsigned int start = 7;  // Starting index for substring
-    size_t len = 9;          // Maximum length of substring
-
-    // Get the substring using ft_substr
-    char *substring = ft_substr(original, start, len);
-
-    // Check if the substring was created successfully
-    if (substring != NULL) {
-        printf("Original string: %s\n", original);
-        printf("Substring: %s\n", substring);
-        free(substring); // Free the allocated memory for the substring
-    } else {
-        printf("Memory allocation failed.\n");
-    }
-
-    return 0;
-}*/

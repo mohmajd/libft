@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:15:48 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/12 21:18:11 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:27:33 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const	char *str)
 
 	r = 0;
 	signe = ft_sign(&str);
-	while (*str <= '9' && *str >= '0')
+	while (*str >= '0' && *str <= '9')
 	{
 		r = r * 10 + (*str - 48);
 		str++;
