@@ -6,7 +6,7 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:03:02 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/04 22:14:37 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/15 00:32:15 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*p;
 	int		i;
 
-	p = (char *)s;
 	i = 0;
-	while (p[i])
+	while (s[i])
 	{
-		if (p[i] == c)
-			return (p + i);
+		if (s[i] == c)
+			return ((char *)s + i);
 		i++;
 	}
 	if (c == '\0')
-		return (p + i);
+		return ((char *)s + i);
 	return (NULL);
 }

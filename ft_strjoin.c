@@ -6,11 +6,23 @@
 /*   By: mohmajdo <mohmajdo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:06:22 by mohmajdo          #+#    #+#             */
-/*   Updated: 2024/11/05 00:24:11 by mohmajdo         ###   ########.fr       */
+/*   Updated: 2024/11/15 20:21:21 by mohmajdo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_len(const char *s)
+{
+	int	i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -22,8 +34,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	i = 0;
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
+	s1_len = ft_len(s1);
+	s2_len = ft_len(s2);
 	cnc = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (cnc == NULL)
 		return (NULL);
